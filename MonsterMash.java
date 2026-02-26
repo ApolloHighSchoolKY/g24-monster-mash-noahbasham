@@ -33,5 +33,7 @@ public class MonsterMash{
     System.out.println(cleopatra.wrap());
     System.out.println(cleopatra.getBandageCount());
 
+    Mummy newMum = new Mummy("George Thorogood");
+    System.out.println(newMum);
   }
 }

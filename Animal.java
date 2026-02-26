@@ -22,7 +22,16 @@ public class Animal
 	     */
 	    public Animal()
 	    {
+			age = 0;
+			alive = true;
+			sound = "I am not a real animal";
+	    }
 
+		public Animal(String sound)
+	    {
+			age = 0;
+			alive = true;
+			this.sound = sound;
 	    }
 
 	    /**
@@ -31,24 +40,39 @@ public class Animal
 	    */
         public boolean isAlive()
     	{
-
+			return(alive);
     	}
 
+		public void eat(){
+			age++;
+		}
      	/**
      	* Make the animal die :(
      	*/
      	public void kill()
      	{
-
+			alive = false;
      	}
 
+		public int getAge(){
+			return age;
+		}
+
+		public String getSpecies(){
+			if(sound.equals("Moo!"))
+				return "Cow";
+			else if(sound.equals("Oink!"))
+				return "Pig";
+			else
+				return "I have no clue what this thing is, it's definitely not a cow or a pig.";
+		}
      	/**
      	* Have the animal make a noise
      	* @return the string that is the animals sound it makes
      	*/
      	public String speak()
      	{
-     		return "";
+     		return "" + sound;
      	}
 
      	/**
@@ -58,6 +82,27 @@ public class Animal
      	*/
      	public String toString()
      	{
-     		return "";
+     		if(alive)
+				return "Age :: " + age + "\nSound :: " + sound + "\n";
+			else
+				return "Age of Death :: " + age + "\nSound :: " + sound + "\n";
      	}
+
+		public String equals(Animal animal){
+			String output = "";
+
+			if(getAge()==animal.getAge())
+				output += "The two animals are the same age.\n";
+			else
+				output += "The two animals are not the same age.\n";
+
+			if(getSpecies().equals(animal.getSpecies()))
+				output += "The two animals are the same species.\n";
+			else
+				output += "The two animals are not the same species.\n";
+
+			return output;
+
+			
+		}
 }
