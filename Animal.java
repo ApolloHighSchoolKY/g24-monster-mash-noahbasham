@@ -24,7 +24,7 @@ public class Animal
 	    {
 			age = 0;
 			alive = true;
-			sound = "I am not a real animal";
+			this("Sound");
 	    }
 
 		public Animal(String sound)

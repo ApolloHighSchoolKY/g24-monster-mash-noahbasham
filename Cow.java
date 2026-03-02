@@ -13,7 +13,7 @@
 
 public class Cow extends Animal
 {
-    private int milkProduced;
+    private double milkProduced;
 
     public Cow()
     {
@@ -23,7 +23,7 @@ public class Cow extends Animal
 
     public void eat(){
         super.eat();
-        milkProduced += (int)((Math.random() * 10)) + 5;
+        milkProduced += ((Math.random() * 10)) + 5;
     }
     
     public String toString(){
