@@ -23,6 +23,8 @@ public class Cow extends Animal
 
     public void eat(){
         super.eat();
+        milkProduced += (int)((Math.random() * 10)) + 5;
+        milkProduced = milkProduced;
         milkProduced += ((Math.random() * 10)) + 5;
     }
     
