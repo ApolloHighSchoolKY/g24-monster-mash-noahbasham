@@ -7,10 +7,10 @@
  * we will override the existing methods we will create
  * here.
  ***********************************************************
- * @author  Mr. Leohr, February 7th, 2016
+ * @author  Mr. Leohr, February 7th, 2016 
  */
 
-
+//this is a change
 public class Animal
 {
 	private int age;
